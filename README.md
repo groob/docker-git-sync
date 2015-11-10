@@ -10,10 +10,11 @@ To use the repo you must specify the following environment variables:
 `GIT_SYNC_REV` Sync to a specific revision. Enter a commit hash Defauts to latest commit.
 
 ```sh
-docker run -e GIT_SYNC_REPO=https://github.com/groob/docker-git-sync.git \
-    GIT_SYNC_BRANCH=master \
-    GIT_SYNC_DEST=/data \
-    GIT_SYNC_REV=d95545407ecc1a5707111c77fe6ebae6011327f9 \
+docker run \
+    -e GIT_SYNC_REPO=https://github.com/groob/docker-git-sync.git \
+    -e GIT_SYNC_BRANCH=master \
+    -e GIT_SYNC_DEST=/data \
+    -e GIT_SYNC_REV=d95545407ecc1a5707111c77fe6ebae6011327f9 \
     groob/git-sync
 ```
 
