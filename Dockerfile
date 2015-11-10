@@ -14,3 +14,5 @@ RUN apk add --update --virtual build-dependencies curl && \
     git-lfs init && \
     apk del build-dependencies && \
     rm -rf /var/cache/apk/*
+
+ENTRYPOINT ["/git-sync.sh"]
